@@ -9,22 +9,16 @@
     <body>
         <div class = "container">
             <div class = "todo-app">
-                <h2>To-Do List <img src="./icon.png"></h2>
+                <h2>To-Do List <img src="images/icon.png"></h2>
                 <div class = "row">
                     <input type = "text" id = "input-box" placeholder="Add your task">
                     <button onclick = "addTask()">Add</button>
                 </div>
                 <ul id= "list-container">
-                    <!--<li class = "checked">Task 1</li>
-                    <li>Task 2</li>
-                    <li>Task 3</li> -->
+                   
                 </ul>
             </div>
         </div>
-        
-        <!--<script src= "scriptList.js">
-
-        </script> -->
 
         <script>
             const inputBox = document.getElementById("input-box");
@@ -136,7 +130,7 @@
                 height: 28px;
                 width: 28px;
                 border-radius: 50%;
-                background-image: url("./unchecked.png");
+                background-image: url("images/unchecked.png");
                 background-size: cover;
                 background-position: center;
                 top: 8px;
@@ -147,7 +141,7 @@
                 text-decoration: line-through;
             }
             ul li.checked::before{
-                background-image: url("./checked.png");
+                background-image: url("images/checked.png");
             }
             ul li span{
                 position: absolute;
