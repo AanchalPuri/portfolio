@@ -1,6 +1,7 @@
+/*
 body {
     background: linear-gradient(135deg, #F88379, #DE3163);
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 .container {
@@ -33,14 +34,15 @@ a {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    width: 100%; /* Fill the width */
+    width: 100%;
     margin-top: 40px;
 }
 
+
 .links-container a {
-    width: 90%; /* Fill most of the width */
-    padding: 15px; /* Increase padding for bigger buttons */
-    font-size: 20px; /* Increase font size */
+    width: 90%; 
+    padding: 15px; 
+    font-size: 20px; 
     color: #414345 !important;
     transition: 0.2s;
 }
@@ -89,7 +91,7 @@ a {
 .contact {
     text-align: center;
     color: #fdf5e6;
-    margin-top: 5px; /* Space above */
+    margin-top: 5px; 
 }
 
 .contact .info {
@@ -102,13 +104,13 @@ a {
 }
 
 .contact .info span {
-    font-size: large; /* Increase font size */
+    font-size: large;
 }
 
 .contact .info a {
-    color: #fdf5e6; /* Change link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 5px; /* Increase link font size */
+    color: #fdf5e6;
+    text-decoration: none; 
+    font-size: 5px; 
 }
 .contact p{
     font-size: 30px;
@@ -117,24 +119,24 @@ a {
 
 .resume {
     display: flex;
-    justify-content: space-between; /* Spread columns evenly */
-    width: 100%; /* Full width */
-    margin-top: 20px; /* Space above */
+    justify-content: space-between; 
+    width: 100%; 
+    margin-top: 20px;
 }
 
 .resumeContainer {
     display: flex;
-    flex: 1; /* Allow columns to take equal space */
-    width: 100%; /* Full width */
+    flex: 1; 
+    width: 100%; 
 }
 
 .column {
-    flex: 1; /* Each column takes equal width */
+    flex: 1;
     padding: 20px;
     background-color: #AA336A;
     background: linear-gradient(135deg, #F88379, #DE3163);
     border: 1px solid #ccc;
-    margin: 0; /* No margin */
+    margin: 0;
 }
 .column h3{
     font-weight: bold;
@@ -142,7 +144,7 @@ a {
 }
 
 .resume h3 {
-    margin-bottom: 30px; /* Adjust margin as needed */
+    margin-bottom: 30px; 
 }
 h3{
     font-family: 'Garamond', serif;
@@ -203,3 +205,439 @@ h3{
     height: 20px;
     z-index: 1;
 }
+*/
+
+/* 90s pastel background + subtle grid */
+body {
+  margin: 0;
+  font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%) -20px 0/40px 40px,
+    linear-gradient(225deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%) -20px 0/40px 40px,
+    linear-gradient(315deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%) 0px 0/40px 40px,
+    linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%) 0px 0/40px 40px,
+    linear-gradient(135deg, #ffd1e8, #ffb6d9);
+  color: #2b1c27;
+}
+
+.counter {
+    background: #3a2323;
+    color: #ffd1e8;
+    padding: 5px 10px;
+    border: 2px solid #f06292;
+    display: inline-block;
+    margin: 5px 0;
+    font-family: 'Courier New', monospace;
+}
+
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%) -20px 0/40px 40px,
+    linear-gradient(225deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%) -20px 0/40px 40px,
+    linear-gradient(315deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%) 0px 0/40px 40px,
+    linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%) 0px 0/40px 40px,
+    linear-gradient(135deg, #ffd1e8, #ffb6d9);
+  z-index: 9999;
+}
+
+/* Page frame to mimic an old window */
+.page-frame {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Retro top bar */
+.top-bar {
+  background: linear-gradient(90deg, #ff9ac7, #ffc8e6);
+  border-bottom: 3px solid #ff6b9f;
+  box-shadow: 0 3px 0 #c44170;
+}
+
+.top-bar-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  color: #5b1438;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.top-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #5b1438;
+}
+
+.top-dot.pink { background-color: #ffe4f4; }
+.top-dot.yellow { background-color: #fff6ba; }
+.top-dot.teal { background-color: #c3fff5; }
+
+.top-title {
+  margin-left: 6px;
+}
+
+/* Layout container */
+.container {
+  width: 100%;
+  max-width: none;    /* or remove this line entirely */
+  padding: 20px 15px 40px;
+  margin: 0;          /* remove centering */
+}
+
+/* Card “windows” */
+.card {
+  background-color: #fff7fc;
+  border: 3px dotted #ff8dbb;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 24px;
+  box-shadow: 4px 4px 0 #f06292;
+}
+
+/* Hero section */
+.hero {
+  margin-top: 32px;
+}
+
+.image {
+  background-image: url("https://i.pinimg.com/736x/b3/0a/4d/b30a4d69e94c09a9ad551a3c80695c08.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 5px solid #fdf5e6;
+  box-shadow: 4px 4px 0 #f06292;
+}
+
+.profession {
+  margin-top: 18px !important;
+}
+
+.hero-title {
+  display: inline-block;
+  background-color: #ffebf7;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 3px solid #ff9ac7;
+  font-weight: 800;
+  color: #5b1438;
+  font-size: 26px;
+  text-shadow: 1px 1px #ffe0f0;
+}
+
+/* Headings */
+h3 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #5b1438;
+}
+
+/* About Me */
+.about-me {
+  text-align: left;
+  color: #2b1c27;
+}
+
+.about-me p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #2b1c27;
+}
+
+/* Project links section */
+.links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+  width: 100%;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.links-container h3 {
+  color: #5b1438;
+  margin-bottom: 10px;
+}
+
+/* Keep W3 buttons but give them a retro twist */
+.links-container a {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  color: #414345 !important;
+  border-radius: 12px !important;
+  border: 3px solid #ffafd6 !important;
+  box-shadow: 3px 3px 0 #f06292;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.icons a {
+  text-decoration: none;
+}
+
+.icons a svg {
+  width: 36px;
+  height: 36px;
+  stroke: #5b1438;
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+  color: #2b1c27;
+}
+
+.contact-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.contact .info {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.contact .info span {
+  font-size: 16px;
+}
+
+.contact .info a {
+  color: #5b1438;
+  text-decoration: none;
+}
+
+.contact .info a:hover {
+  text-decoration: underline;
+}
+
+/* Resume layout */
+.resume {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.resumeContainer {
+  display: contents; /* not needed anymore but kept for minimal changes */
+}
+
+.column {
+  flex: 1 1 300px;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  margin: 0;
+}
+
+.column h3 {
+  margin-bottom: 20px;
+}
+
+/* Timelines styled like old “folders” */
+.timeline {
+  list-style-type: none;
+  position: relative;
+  padding-left: 40px;
+  margin: 0;
+}
+
+.timeline:before {
+  content: '';
+  background: #ffb6d9;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 3px;
+  height: 100%;
+  z-index: 1;
+  border-radius: 3px;
+}
+
+.timeline li {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  margin-left: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 3px 3px 0 #f8a1c4;
+  overflow: hidden;
+  position: relative;
+}
+
+.timeline li h4 {
+  background: linear-gradient(90deg, #ff9ac7, #ffc8e6);
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #3f1028;
+}
+
+.timeline li h4 span {
+  font-weight: bold;
+}
+
+.timeline li p {
+  background-color: #ffffff;
+  padding: 12px 16px 14px;
+  border-radius: 0 0 12px 12px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.timeline li:before {
+  content: '';
+  background: #fff;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #ff6b9f;
+  right: 12px;
+  width: 18px;
+  height: 18px;
+  top: 16px;
+  z-index: 2;
+}
+
+/* Footer */
+.footer-bar {
+  margin-top: auto;
+  text-align: center;
+  padding: 8px 10px 14px;
+  font-size: 12px;
+  color: #5b1438;
+  font-family: 'Nunito', sans-serif;
+}
+
+.footer-bar .heart {
+  color: #ff2e7e;
+}
+
+/* Small screens */
+@media (max-width: 700px) {
+  .hero-title {
+    font-size: 20px;
+  }
+
+  .top-bar-inner {
+    font-size: 8px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .links-container a {
+    font-size: 16px;
+  }
+}
+
+/* Faux 90s loading bar */
+.loading-bar {
+  max-width: 480px;
+  margin: 20px auto 0;
+  text-align: left;
+}
+
+.loading-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  color: #5b1438;
+}
+
+.loading-track {
+  position: relative;
+  width: 100%;
+  height: 22px;
+  border-radius: 8px;
+  border: 3px solid #ff8dbb;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffe6f4,
+    #ffe6f4 6px,
+    #ffd1e8 6px,
+    #ffd1e8 12px
+  );
+  overflow: hidden;
+}
+
+.loading-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 88%;
+  height: 100%;
+  background: linear-gradient(90deg, #ff9ac7, #ffc8e6);
+  box-shadow: inset 0 0 0 2px #f06292;
+  animation: loading-stripes 1.4s linear infinite;
+}
+
+@keyframes loading-stripes {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(24px);
+  }
+}
+
+.loading-label {
+  margin-top: 6px;
+  font-size: 11px;
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #5b1438;
+}
+
+/* Tiny pixel hearts */
+.pixel-heart {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  color: #ff2e7e;
+  text-shadow: 1px 1px #ffc8e6;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
