@@ -7,6 +7,33 @@
     <title>Aanchal Puri's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+      /* Collapsible timeline styles */
+      .timeline li { position: relative; padding-left: 64px; }
+      .toggle-circle {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 3px solid #f06292;
+        background: #fff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        font-size: 18px;
+        line-height: 1;
+      }
+      .toggle-circle:focus { outline: 2px solid rgba(240,98,146,0.3); }
+      .toggle-circle::after { content: '+'; color: #f06292; font-weight: 700; }
+      .timeline li.open .toggle-circle::after { content: '\2212'; }
+
+      .collapsible-content { max-height: 0; overflow: hidden; transition: max-height 0.28s ease; }
+      .timeline li.open .collapsible-content { max-height: 1000px; }
+    </style>
   </head>
 
   <body>
@@ -26,14 +53,13 @@
       </div>
     </div> 
 
-    <div class="container" id="main-content" style="display: none;">
-      
+    <div class="container" id="main-content" style="display: none;">      
       <!-- Navigation Bar -->
       <nav class="nav-bar">
         <button class="nav-button active" onclick="showSection('about')">About Me</button>
+        <button class="nav-button" onclick="showSection('resume')">Experience & Education</button>
         <button class="nav-button" onclick="showSection('projects')">Coding Projects</button>
         <button class="nav-button" onclick="showSection('ceramics')">Ceramics</button>
-        <button class="nav-button" onclick="showSection('resume')">Resume</button>
       </nav>
 
       <!-- Header Section (always visible) -->
@@ -96,6 +122,19 @@
           <a href="imageSearchEngine.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">Image Search Engine using API</a>
           <a href="dictionary.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">English Dictionary using API</a>
         </div>
+
+        <div class="icons w3-padding">
+          <a href = "https://www.linkedin.com/in/aanchal-puri" target="_blank">
+            <i data-feather="linkedin"></i>
+          </a>
+          <a href="https://github.com/AanchalPuri" target="_blank">
+            <i data-feather="github"></i>
+          </a>
+          <a href="https://www.instagram.com/aanchlada/" target="_blank">
+            <i data-feather="instagram"></i>
+          </a>
+        </div>
+
       </div>
 
       <!-- Ceramics Section -->
@@ -112,6 +151,19 @@
             <p style="font-style: italic; color: #5b1438;">Gallery under construction...</p>
           </div>
         </div>
+
+        <div class="icons w3-padding">
+          <a href = "https://www.linkedin.com/in/aanchal-puri" target="_blank">
+            <i data-feather="linkedin"></i>
+          </a>
+          <a href="https://github.com/AanchalPuri" target="_blank">
+            <i data-feather="github"></i>
+          </a>
+          <a href="https://www.instagram.com/aanchlada/" target="_blank">
+            <i data-feather="instagram"></i>
+          </a>
+        </div>
+
       </div>
 
       <!-- Resume Section -->
@@ -209,6 +261,19 @@
             </div>
           </div>
         </div>
+
+        <div class="icons w3-padding">
+          <a href = "https://www.linkedin.com/in/aanchal-puri" target="_blank">
+            <i data-feather="linkedin"></i>
+          </a>
+          <a href="https://github.com/AanchalPuri" target="_blank">
+            <i data-feather="github"></i>
+          </a>
+          <a href="https://www.instagram.com/aanchlada/" target="_blank">
+            <i data-feather="instagram"></i>
+          </a>
+        </div>
+
       </div>
     </div>
 
@@ -226,6 +291,7 @@
         document.getElementById('loading-screen').style.display = 'none';
         document.getElementById('main-content').style.display = 'block';
         initFeather(); // Replace icons after content is shown
+          setupCollapsibles();
       }, 2000);
     });
 
@@ -256,8 +322,48 @@
     // Initialize feather icons when script loads
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', initFeather);
+      document.addEventListener('DOMContentLoaded', setupCollapsibles);
     } else {
       initFeather();
+    }
+
+    // Create collapsible toggles for each timeline item
+    function setupCollapsibles() {
+      const items = document.querySelectorAll('.timeline li');
+      items.forEach(li => {
+        if (li.querySelector('.toggle-circle')) return;
+        const h4 = li.querySelector('h4');
+        if (!h4) return;
+
+        // Wrap all nodes after h4 into a collapsible content div
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'collapsible-content';
+        let node = h4.nextSibling;
+        while (node) {
+          const next = node.nextSibling;
+          contentDiv.appendChild(node);
+          node = next;
+        }
+        li.appendChild(contentDiv);
+
+        // Create toggle button (circle)
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'toggle-circle';
+        btn.setAttribute('area-expanded', 'false');
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = li.classList.toggle('open');
+          btn.setAttribute('area-expanded', isOpen ? 'true' : 'false');
+          if (isOpen) {
+            contentDiv.style.maxHeight = contentDiv.scrollHeight + 'px';
+          } else {
+            contentDiv.style.maxHeight = '0';
+          }
+        });
+
+        li.insertBefore(btn, h4);
+      });
     }
   </script>
   </body>  
