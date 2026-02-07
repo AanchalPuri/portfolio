@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,6 +27,16 @@
     </div> 
 
     <div class="container" id="main-content" style="display: none;">
+      
+      <!-- Navigation Bar -->
+      <nav class="nav-bar">
+        <button class="nav-button active" onclick="showSection('about')">About Me</button>
+        <button class="nav-button" onclick="showSection('projects')">Coding Projects</button>
+        <button class="nav-button" onclick="showSection('ceramics')">Ceramics</button>
+        <button class="nav-button" onclick="showSection('resume')">Resume</button>
+      </nav>
+
+      <!-- Header Section (always visible) -->
       <div class="w3-margin-top" style="text-align: center">
         <div class="image"></div>
           <p class="profession">
@@ -41,172 +50,215 @@
         <p class="counter">EST. 2026 | VISITORS: 00042</p>
       </div>
 
-    <div class="about-me" style="text-align: center; margin-top: 5px;">
-      <h3>About Me</h3>
-      <p>
-      Well well well...what do we have here? Looks like you've somehow stumbled upon my coding portfolio (lucky you).
-      </p>
-      <p>
-        Hey there! I'm Aanchal Puri, a first year Computer Science (Machine Learning Track) student at the 
-        University of Maryland, College Park. Below you'll find some of my coding projects and pictures of my latest ceramics creations.
-        When I'm not busy with my classes or pulling my hair out over debugging my code, you can catch me at the ceramics 
-        studio on campus, snuggled up with a classic novel, or taking over the world...(jk, or am I?). <span class="pixel-heart">♥</span>
-      </p>
-    </div>
-
-    <div class="links-container">
-      <h3>Coding Projects in HTML, CSS, and JS</h3>
-      <a href="pinkCalculator.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">4-Function Calculator</a>
-      <a href="toDoList.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">To-Do List App</a>
-      <a href="weatherApp.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">Weather App using API</a>
-      <a href="imageSearchEngine.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">Image Search Engine using API</a>
-      <a href="dictionary.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">English Dictionary using API</a>
-    </div>
-
-      <!-- Resume info section -->
-    <div class = "resume" id="resume">
-      <div class = "resumeContainer">
-        <div class = "column experience">
-          <h3>My Experiences</h3>
-          <ul class = "timeline">
-
-            <li>
-              <h4><span>Full-Stack Software Developer Intern @ UMD Libraries</span></h4>
-              <p>Coming Soon...<br>
-              <br><b>Duration</b> - January 2026<br>
-              <b>Location</b> - Hybrid (College Park, MD)<br>
-              </p>
-            </li>
-
-            <li>
-              <h4><span>TechStart Program: Computing Catalyst @UMD </span></h4>
-              <p>Engaged in an intensive program focused on critical design thinking and real-world problem-solving, emphasizing community-oriented innovation<br>
-              <p>Collaborated with four other group members to ideate an website/application for social good<br>
-
-              <a href="https://v0.app/chat/terpmove-website-tDBymVXmISn">Link to the v0 TerpMove Website</a><br>
-
-              <br><b>Duration</b> - August 2025<br>
-              <b>Location</b> - College Park, MD (Virtual)<br>
-              </p>
-            </li>
-
-            <li>
-              <h4><span>Camp Invention Leadership Intern </span></h4>
-              <p>Led and taught a group of elementary-age students various STEM concepts, intellectual properties, and real-world innovators through program content.<br>
-              <br><b>Duration</b> - Summers of 2023-2025<br>
-              <b>Location</b> - Silver Spring, Maryland<br>
-              </p>
-            </li>
-
-            <li>
-              <h4><span>FIRST Robotics Team 1389 Lead </span></h4>
-              <p>Assists in development and implementation of code for competitive robots using Java, Python, and JavaScript, and provides on-field instruction and technical support during competitions.<br>
-              <br><b>Duration</b> - October 2021 to April 2025<br>
-              <b>Location</b> - Bethesda, Maryland<br>
-              </p>
-            </li>
-
-            <li>
-              <h4><span>Mind4Youth Data Management Internship</span></h4>
-              <p>Conducted market research and analysis to identify target audiences and opportunities for growth<br>
-              <br><b>Duration</b> - September 2023 to January 2024<br>
-              <b>Location</b> - Remote<br>
-              </p>
-            </li>
-
-          <!--
-            <li>
-              <h4><span>Verizon Cloud Platform Internship</span></h4>
-              <p>Completed an internship project involving building a hypothetical new VPN product for Verizon’s Cloud Computing team.<br>
-              <b>Duration</b> - July to August of 2024<br>
-              <b>Location</b> - Remote<br>
-              </p>
-            </li>
-          </ul>
+      <!-- About Me Section -->
+      <div id="about-section" class="content-section active">
+        <div class="about-me card" style="text-align: center; margin-top: 5px;">
+          <h3>About Me</h3>
+          <p>
+          Well well well...what do we have here? Looks like you've somehow stumbled upon my coding portfolio (lucky you).
+          </p>
+          <p>
+            Hey there! I'm Aanchal Puri, a first year Computer Science (Machine Learning Track) student at the 
+            University of Maryland, College Park. Below you'll find some of my coding projects and pictures of my latest ceramics creations.
+            When I'm not busy with my classes or pulling my hair out over debugging my code, you can catch me at the ceramics 
+            studio on campus, snuggled up with a classic novel, or taking over the world...(jk, or am I?). <span class="pixel-heart">♥</span>
+          </p>
         </div>
-        -->
 
+        <div class="contact card">
+          <p class="contact-title"><span class="w3-padding w3-margin">CONTACT ME</span></p>
+          <div class="info">
+            <a href = "mailto:puriaanchal7@gmail.com">
+              <span><i data-feather="mail"></i> puriaanchal7@gmail.com</span></a>
+          </div>
+        </div>
+
+        <div class="icons w3-padding">
+          <a href = "https://www.linkedin.com/in/aanchal-puri" target="_blank">
+            <i data-feather="linkedin"></i>
+          </a>
+          <a href="https://github.com/AanchalPuri" target="_blank">
+            <i data-feather="github"></i>
+          </a>
+          <a href="https://www.instagram.com/aanchlada/" target="_blank">
+            <i data-feather="instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Coding Projects Section -->
+      <div id="projects-section" class="content-section">
+        <div class="links-container card">
+          <h3>Coding Projects in HTML, CSS, and JS</h3>
+          <a href="pinkCalculator.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">4-Function Calculator</a>
+          <a href="toDoList.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">To-Do List App</a>
+          <a href="weatherApp.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">Weather App using API</a>
+          <a href="imageSearchEngine.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">Image Search Engine using API</a>
+          <a href="dictionary.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">English Dictionary using API</a>
+        </div>
+      </div>
+
+      <!-- Ceramics Section -->
+      <div id="ceramics-section" class="content-section">
+        <div class="card">
+          <h3 style="text-align: center;">My Ceramics Projects</h3>
+          <p style="text-align: center; font-size: 18px; margin-top: 20px;">
+            Coming soon! This is where I'll showcase my latest ceramics creations from the studio. 
+            Stay tuned for some pictures of my favorite pieces! <span class="pixel-heart">♥</span>
+          </p>
+
+          <!-- add gallery grid here later -->
+          <div class="ceramics-gallery" style="margin-top: 30px; text-align: center;">
+            <p style="font-style: italic; color: #5b1438;">Gallery under construction...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resume Section -->
+      <div id="resume-section" class="content-section">
+        <div class="resume">
+          <div class="resumeContainer">
+            <div class="column experience">
+              <div class="card">
+                <h3>My Experiences</h3>
+                <ul class="timeline">
+
+                  <li>
+                    <h4><span>Full-Stack Software Developer Intern @ UMD Libraries</span></h4>
+                    <p>Coming Soon...<br>
+                    <br><b>Duration</b> - January 2026<br>
+                    <b>Location</b> - Hybrid (College Park, MD)<br>
+                    </p>
+                  </li>
+
+                  <li>
+                    <h4><span>TechStart Program: Computing Catalyst @UMD </span></h4>
+                    <p>Engaged in an intensive program focused on critical design thinking and real-world problem-solving, emphasizing community-oriented innovation<br>
+                    <p>Collaborated with four other group members to ideate an website/application for social good<br>
+
+                    <a href="https://v0.app/chat/terpmove-website-tDBymVXmISn">Link to the v0 TerpMove Website</a><br>
+
+                    <br><b>Duration</b> - August 2025<br>
+                    <b>Location</b> - College Park, MD (Virtual)<br>
+                    </p>
+                  </li>
+
+                  <li>
+                    <h4><span>Camp Invention Leadership Intern </span></h4>
+                    <p>Led and taught a group of elementary-age students various STEM concepts, intellectual properties, and real-world innovators through program content.<br>
+                    <br><b>Duration</b> - Summers of 2023-2025<br>
+                    <b>Location</b> - Silver Spring, Maryland<br>
+                    </p>
+                  </li>
+
+                  <li>
+                    <h4><span>FIRST Robotics Team 1389 Lead </span></h4>
+                    <p>Assists in development and implementation of code for competitive robots using Java, Python, and JavaScript, and provides on-field instruction and technical support during competitions.<br>
+                    <br><b>Duration</b> - October 2021 to April 2025<br>
+                    <b>Location</b> - Bethesda, Maryland<br>
+                    </p>
+                  </li>
+
+                  <li>
+                    <h4><span>Mind4Youth Data Management Internship</span></h4>
+                    <p>Conducted market research and analysis to identify target audiences and opportunities for growth<br>
+                    <br><b>Duration</b> - September 2023 to January 2024<br>
+                    <b>Location</b> - Remote<br>
+                    </p>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="column education">
+              <div class="card">
+                <h3>My Education</h3>
+                <ul class="timeline">
+
+                  <li>
+                    <h4><span>University of Maryland, College Park '29</span></h4>
+                    <p>Bachelor of Science, Computer Science - Machine Learning</p>
+                    <p>College Park Scholars: Data Justice Program<br></p>
+                    <p>Computing Catalyst @UMD - Break Through Tech<br></p>
+                  </li>
+
+                  <li>
+                    <h4><span>Walt Whitman High School, Bethesda MD '25</span></h4>
+                    <p>High School Diploma (Unweighted GPA: 4.0, Weighted GPA: 4.89)<br></p>
+                    <p>Activites: FIRST Robotics Team 1389 Lead, Asian Cultures Club President, International Night Organizing Committee<br></p>
+                  </li>
+
+                  <li>
+                    <h4><span>Current Coursework</span></h4>
+                    <p>Object-Oriented Programming II - Java (CMSC132)</p> 
+                    <p>Linear Algebra for Engineers and Scientists (MATH461)</p>
+                    <p>Human-AI Fiction Co-Writing (INST388T)</p>
+                    <p>Approach to Computing: Synthetic Photography (INST388R)</p>
+                    <p>Know Thyself: Wisdom Through Cognitive Science (PHIL202)</p>
+                    <p>Critical Thinking and Speaking (COMM200)</p>
+                    <p>College Park Scholars: Data Justice (CPDJ101)</p>
+                  </li>
+                  <li>
+                    <h4><span>Past Coursework</span></h4>
+                    <p>Multivariable Calculus, Linear Algebra, AP CSP, AP CSA, Programming 3<br>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-
-    <div class = "column education">
-      <h3>My Education</h3>
-      <ul class = "timeline">
-        <!---
-        <li>
-          <h4><span>Accenture Software Engineering Internship</span></h4>
-          <p>Recommended and assisted in the creation of an appropriate cloud-based solution for Digital Health.<br>
-          <b>Duration</b> - August to September of 2024<br>
-          <b>Location</b> - Remote<br>
-          </p>
-        </li>
-        -->
-
-        <li>
-          <h4><span>University of Maryland, College Park '29</span></h4>
-          <p>Bachelor of Science, Computer Science - Machine Learning</p>
-          <p>College Park Scholars: Data Justice Program<br></p>
-          <p>Computing Catalyst @UMD - Break Through Tech<br></p>
-
-        </li>
-
-        <li>
-          <h4><span>Walt Whitman High School, Bethesda MD '25</span></h4>
-          <p>High School Diploma (Unweighted GPA: 4.0, Weighted GPA: 4.89)<br></p>
-          <p>Activites: FIRST Robotics Team 1389 Lead, Asian Cultures Club President, International Night Organizing Committee<br></p>
-        </li>
-
-        <li>
-          <h4><span>Current Coursework</span></h4>
-          <p>Object-Oriented Programming II - Java (CMSC132)</p> 
-          <p>Linear Algebra for Engineers and Scientists (MATH461)</p>
-          <p>Human-AI Fiction Co-Writing (INST388T)</p>
-          <p>Approach to Computing: Synthetic Photography (INST388R)</p>
-          <p>Know Thyself: Wisdom Through Cognitive Science (PHIL202)</p>
-          <p>Critical Thinking and Speaking (COMM200)</p>
-          <p>College Park Scholars: Data Justice (CPDJ101)</p>
-        </li>
-        <li>
-          <h4><span>Past Coursework</span></h4>
-          <p>Multivariable Calculus, Linear Algebra, AP CSP, AP CSA, Programming 3<br>
-          </p>
-        </li>
-      </ul>
-    </div>
-
-      
-    <div class="icons w3-padding">
-      <a href = "https://www.linkedin.com/in/aanchal-puri" target="_blank">
-        <i data-feather="linkedin"></i>
-      </a>
-      <a href="https://github.com/AanchalPuri" target="_blank">
-        <i data-feather="github"></i>
-      </a>
-      <a href="https://www.instagram.com/aanchlada/" target="_blank">
-        <i data-feather="instagram"></i>
-      </a>
-    </div><br>
-      
-    <div class="contact">
-      <p class=""><span class="w3-padding w3-margin" style="font-weight: bolder">CONTACT ME</span></p>
-      <div class="info">
-        <a href = "mailto:puriaanchal7@gmail.com">
-          <span><i data-feather="mail"></i> puriaanchal7@gmail.com</span></a>
-      </div>
-    </div>
-  </div>
   <script>
-    feather.replace()
+    // Wait for feather icons to load
+    function initFeather() {
+      if (typeof feather !== 'undefined') {
+        feather.replace();
+      }
+    }
 
-
+    // Loading screen
     window.addEventListener('load', function () {
-    setTimeout(function () {
-      document.getElementById('loading-screen').style.display = 'none';
-      document.getElementById('main-content').style.display = 'block';
-    }, 2000);
-  });
+      setTimeout(function () {
+        document.getElementById('loading-screen').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+        initFeather(); // Replace icons after content is shown
+      }, 2000);
+    });
+
+    // Section navigation
+    function showSection(sectionName) {
+      // Hide all sections
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      // Remove active class from all buttons
+      const buttons = document.querySelectorAll('.nav-button');
+      buttons.forEach(button => {
+        button.classList.remove('active');
+      });
+
+      // Show selected section
+      document.getElementById(sectionName + '-section').classList.add('active');
+
+      // Add active class to clicked button
+      event.target.classList.add('active');
+
+      // Replace feather icons in newly shown section
+      initFeather();
+    }
+
+    // Initialize feather icons when script loads
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFeather);
+    } else {
+      initFeather();
+    }
   </script>
   </body>  
 </html>
