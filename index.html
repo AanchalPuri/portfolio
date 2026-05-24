@@ -186,12 +186,28 @@
               <div class="card">
                 <h3>My Experiences</h3>
                 <ul class="timeline">
+                  <li>
+                    <h4><span>AI/Machine Learning Fellow @ Break Through Tech</span></h4>
+                    <p>Coming Soon...<br>
+                    <br><b>Duration</b> - March 2026 - May 2027<br>
+                    <b>Location</b> - Remote/New York, NY<br>
+                    </p>
+                  </li>
 
                   <li>
                     <h4><span>Full-Stack Software Developer Intern @ UMD Libraries</span></h4>
                     <p>Coming Soon...<br>
                     <br><b>Duration</b> - January 2026<br>
                     <b>Location</b> - Hybrid (College Park, MD)<br>
+                    </p>
+                  </li>
+
+                  <li>
+                    <h4><span>Computer Science Peer Advisor @ UMD CS Advising Department</span></h4>
+                    <p>Mentors and advises computer science students on academic planning, course sequencing, and degree requirements during daily drop-in sessions<br>
+                    <p>Manages front-desk operations and departmental communications by efficiently handling a high volume of student inquiries via email and phone <br>
+                    <br><b>Duration</b> - February 2026 - Present<br>
+                    <b>Location</b> - In person (College Park, MD)<br>
                     </p>
                   </li>
 
@@ -222,7 +238,8 @@
                     <b>Location</b> - Bethesda, Maryland<br>
                     </p>
                   </li>
-
+                  
+                  <!--
                   <li>
                     <h4><span>Mind4Youth Data Management Internship</span></h4>
                     <p>Conducted market research and analysis to identify target audiences and opportunities for growth<br>
@@ -230,7 +247,7 @@
                     <b>Location</b> - Remote<br>
                     </p>
                   </li>
-
+                  -->
                 </ul>
               </div>
             </div>
@@ -290,14 +307,12 @@
     </div>
 
   <script>
-    // Wait for feather icons to load
     function initFeather() {
       if (typeof feather !== 'undefined') {
         feather.replace();
       }
     }
 
-    // Loading screen
     window.addEventListener('load', function () {
       setTimeout(function () {
         document.getElementById('loading-screen').style.display = 'none';
@@ -307,31 +322,24 @@
       }, 2000);
     });
 
-    // Section navigation
     function showSection(sectionName) {
-      // Hide all sections
       const sections = document.querySelectorAll('.content-section');
       sections.forEach(section => {
         section.classList.remove('active');
       });
 
-      // Remove active class from all buttons
       const buttons = document.querySelectorAll('.nav-button');
       buttons.forEach(button => {
         button.classList.remove('active');
       });
 
-      // Show selected section
       document.getElementById(sectionName + '-section').classList.add('active');
 
-      // Add active class to clicked button
       event.target.classList.add('active');
 
-      // Replace feather icons in newly shown section
       initFeather();
     }
 
-    // Initialize feather icons when script loads
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', initFeather);
       document.addEventListener('DOMContentLoaded', setupCollapsibles);
@@ -339,7 +347,6 @@
       initFeather();
     }
 
-    // Create collapsible toggles for each timeline item
     function setupCollapsibles() {
       const items = document.querySelectorAll('.timeline li');
       items.forEach(li => {
@@ -347,7 +354,6 @@
         const h4 = li.querySelector('h4');
         if (!h4) return;
 
-        // Wrap all nodes after h4 into a collapsible content div
         const contentDiv = document.createElement('div');
         contentDiv.className = 'collapsible-content';
         let node = h4.nextSibling;
@@ -418,6 +424,7 @@
       images: [
         "images/ceramics/IMG_7186.jpeg",
         "images/ceramics/IMG_7187.jpeg",
+        "images/ceramics/IMG_7188.jpeg",
       ],
       tags: ["White Art Clay No.25", "Smokey Merlot?", "Wheel-thrown"],
       description: "A lidded jar with a simple, classic shape. This was the first time that I experimented with a gallery on a jar. It took me a while to get the hang of it, but it turned out quite nice. The lid was slightly a bit small and I think the knob could have been a bit bigger, but overall I was really happy with how it turned out. "
