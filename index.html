@@ -46,7 +46,7 @@
               Welcome to Aanchal Puri's Portfolio!
             </span>
           </p>      
-        <p class="counter">EST. 2026 | VISITORS: 00042</p>
+       <!-- <p class="counter">EST. 2026 | VISITORS: 00042</p>-->
       </div>
 
       <!-- About Me Section -->
@@ -58,9 +58,11 @@
           </p>
           <p>
             Hey there! I'm Aanchal Puri, a first year Computer Science (Machine Learning Track) student at the 
-            University of Maryland, College Park. Below you'll find some of my coding projects and pictures of my latest ceramics creations.
+            University of Maryland, College Park. On this website, you'll find a little bit of everything that I'm passionate about - 
+            from my coding projects to my ceramics pieces (and of course, my current favorite books and music).
             When I'm not busy with my classes or pulling my hair out over debugging my code, you can catch me at the ceramics 
-            studio on campus, snuggled up with a classic novel, or taking over the world...(jk, or am I?). <span class="pixel-heart">♥</span>
+            studio on campus, practicing my archery skills, or teaching bollywood dance around the College Park Community. 
+            Welcome again to my little corner of the web & hope you enjoy! <span class="pixel-heart">♥</span>
           </p>
         </div>
 
@@ -73,10 +75,15 @@
 
             <div class="books-gallery" style="margin-top: 30px; text-align: center;">
               <a href="https://www.goodreads.com/book/show/286957.The_Yellow_Wall_Paper" target="_blank">
-                <img src="/images/theYellowWallpaperCover.jpg" alt="The Yellow Wallpaper by Charlotte Perkins Gilman" class="book-cover">
+                <img src="images/theYellowWallpaperCover.jpg" alt="The Yellow Wallpaper by Charlotte Perkins Gilman" class="book-cover">
               </a>
+              
               <a href="https://www.goodreads.com/book/show/32929156-wuthering-heights" target="_blank">
-                <img src="/images/wutheringHeightsCover.jpg" alt="Wuthering Heights by Emily Brontë" class="book-cover">
+                <img src="images/wutheringHeightsCover.jpg" alt="Wuthering Heights by Emily Brontë" class="book-cover">
+              </a>
+              
+              <a href="https://www.goodreads.com/en/book/show/7144.Crime_and_Punishment" target="_blank">
+                <img src="images/crimeAndPunishment.jpg" alt="Crime and Punishment by Fyodor Dostoevsky" class="book-cover">
               </a>
             </div>
           </div>
@@ -92,6 +99,8 @@
               <iframe src="https://open.spotify.com/embed/track/3K3mo4LoxPKk18oqIC3hQC?si=1fa0145a72b244c4" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
               <br><br>
               <iframe src="https://open.spotify.com/embed/track/7HNFphOjDJpUGiseV5YvPZ?si=444c1bf58e734dec" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+              <br><br>
+              <iframe src="https://open.spotify.com/embed/track/2jh0PkYbStyXpz3YC4Srjg?si=548385720101461b" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             
           </div>
@@ -121,12 +130,13 @@
       <!-- Coding Projects Section -->
       <div id="projects-section" class="content-section">
         <div class="links-container card">
-          <h3>Coding Projects in HTML, CSS, and JS</h3>
-          <a href="/calculatorProject/pinkCalculator.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">4-Function Calculator</a>
-          <a href="/toDoListProject/toDoList.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">To-Do List App</a>
-          <a href="/weatherAppProject/weatherApp.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">Weather App using API</a>
-          <a href="/imageSearchEngineProject/imageSearchEngine.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">Image Search Engine using API</a>
-          <a href="/dictionaryProject/dictionary.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">English Dictionary using API</a>
+          <h3>Coding Projects!</h3>
+          <a href="https://github.com/umd-lib/ipmanager-django" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">UMD Libraries IP Manager Django Service</a>
+          <a href="weatherAppProject/weatherApp.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">Weather App using API</a>
+          <a href="imageSearchEngineProject/imageSearchEngine.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">Image Search Engine using API</a>
+          <a href="dictionaryProject/dictionary.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">English Dictionary using API</a>
+          <a href="calculatorProject/pinkCalculator.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">4-Function Calculator</a>
+          <a href="toDoListProject/toDoList.html" class="w3-button w3-sand w3-hover-pale-green link border" target="_blank">To-Do List App</a>
         </div>
 
         <div class="icons w3-padding">
@@ -143,19 +153,15 @@
 
       </div>
 
-      <!-- Ceramics Section -->
+      <!-- Ceramic pieces Section -->
       <div id="ceramics-section" class="content-section">
         <div class="card">
-          <h3 style="text-align: center;">My Ceramics Projects</h3>
-          <p style="text-align: center; font-size: 18px; margin-top: 20px;">
-            Coming soon! This is where I'll showcase my latest ceramics creations from the studio. 
-            Stay tuned for some pictures of my favorite pieces! <span class="pixel-heart">♥</span>
+          <h3 style="text-align:center;">My Ceramics Projects</h3>
+          <p class="section-intro">
+            Pieces from the studio — each one made with love <span class="pixel-heart">♥</span>
           </p>
-
-          <!-- add gallery grid here later -->
-          <div class="ceramics-gallery" style="margin-top: 30px; text-align: center;">
-            <p style="font-style: italic; color: #5b1438;">Gallery under construction...</p>
-          </div>
+        
+          <div class="ceramics-gallery" id="gallery"></div>
         </div>
 
         <div class="icons w3-padding">
@@ -180,12 +186,28 @@
               <div class="card">
                 <h3>My Experiences</h3>
                 <ul class="timeline">
+                  <li>
+                    <h4><span>AI/Machine Learning Fellow @ Break Through Tech</span></h4>
+                    <p>Coming Soon...<br>
+                    <br><b>Duration</b> - March 2026 - May 2027<br>
+                    <b>Location</b> - Remote/New York, NY<br>
+                    </p>
+                  </li>
 
                   <li>
                     <h4><span>Full-Stack Software Developer Intern @ UMD Libraries</span></h4>
                     <p>Coming Soon...<br>
                     <br><b>Duration</b> - January 2026<br>
                     <b>Location</b> - Hybrid (College Park, MD)<br>
+                    </p>
+                  </li>
+
+                  <li>
+                    <h4><span>Computer Science Peer Advisor @ UMD CS Advising Department</span></h4>
+                    <p>Mentors and advises computer science students on academic planning, course sequencing, and degree requirements during daily drop-in sessions<br>
+                    <p>Manages front-desk operations and departmental communications by efficiently handling a high volume of student inquiries via email and phone <br>
+                    <br><b>Duration</b> - February 2026 - Present<br>
+                    <b>Location</b> - In person (College Park, MD)<br>
                     </p>
                   </li>
 
@@ -216,7 +238,7 @@
                     <b>Location</b> - Bethesda, Maryland<br>
                     </p>
                   </li>
-
+                  <!--
                   <li>
                     <h4><span>Mind4Youth Data Management Internship</span></h4>
                     <p>Conducted market research and analysis to identify target audiences and opportunities for growth<br>
@@ -224,7 +246,7 @@
                     <b>Location</b> - Remote<br>
                     </p>
                   </li>
-
+                  -->
                 </ul>
               </div>
             </div>
@@ -284,14 +306,12 @@
     </div>
 
   <script>
-    // Wait for feather icons to load
     function initFeather() {
       if (typeof feather !== 'undefined') {
         feather.replace();
       }
     }
 
-    // Loading screen
     window.addEventListener('load', function () {
       setTimeout(function () {
         document.getElementById('loading-screen').style.display = 'none';
@@ -301,31 +321,24 @@
       }, 2000);
     });
 
-    // Section navigation
     function showSection(sectionName) {
-      // Hide all sections
       const sections = document.querySelectorAll('.content-section');
       sections.forEach(section => {
         section.classList.remove('active');
       });
 
-      // Remove active class from all buttons
       const buttons = document.querySelectorAll('.nav-button');
       buttons.forEach(button => {
         button.classList.remove('active');
       });
 
-      // Show selected section
       document.getElementById(sectionName + '-section').classList.add('active');
 
-      // Add active class to clicked button
       event.target.classList.add('active');
 
-      // Replace feather icons in newly shown section
       initFeather();
     }
 
-    // Initialize feather icons when script loads
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', initFeather);
       document.addEventListener('DOMContentLoaded', setupCollapsibles);
@@ -333,7 +346,6 @@
       initFeather();
     }
 
-    // Create collapsible toggles for each timeline item
     function setupCollapsibles() {
       const items = document.querySelectorAll('.timeline li');
       items.forEach(li => {
@@ -341,7 +353,6 @@
         const h4 = li.querySelector('h4');
         if (!h4) return;
 
-        // Wrap all nodes after h4 into a collapsible content div
         const contentDiv = document.createElement('div');
         contentDiv.className = 'collapsible-content';
         let node = h4.nextSibling;
@@ -371,6 +382,116 @@
         li.insertBefore(btn, h4);
       });
     }
+
+  const pieces = [
+    {
+      title: "Lily Mug & Coaster",
+      images: [
+        "images/ceramics/IMG_7176.jpeg",
+      ],
+      tags: ["Standard 240 Clay (White)", "Underglaze w/ Clear", "Wheel-thrown"],
+      description: "Oh my god, where do I even start with this piece? This is my absolute favorite pair of mug and coaster set that I have made so far. I just love how realistic the lilies look on both the mug and the coaster (trust me they took FOREVER to glaze). The mug shrunk a lot more than expected, but it's still an ideal size for my chai. The coaster is thrown with reclaim clay, which is why it has a bit more speckle to it. I was scrambling to finish this piece before the end of the studio semester, but I'm so glad I did!"
+    },
+    {
+      title: "Flower Cup with Coaster",
+      images: [
+        "images/ceramics/IMG_7178.jpeg",
+        "images/ceramics/IMG_7179.jpeg",
+      ],
+      tags: ["Standard 306 Clay (Brown/Reclaim)", "Underglaze w/ Clear", "Wheel-thrown"],
+      description: "This is the second cup and coaster set that I made at Studio A. I made this with the vision that I will use it as my water cup for my desk, and I think it turned out perfect for that! I kept the glaze on the actual cup on the simpler side, but made sure to glaze my name carefully with some black glaze & a tiny brush. The coaster has a similar flower design to the Garlic Grater piece & the flower dishes (I just love that flower pattern)."
+    },
+    {
+      title: "Flower Dish No. 1",
+      images: [
+        "images/ceramics/IMG_7182.jpeg",
+      ],
+      tags: ["White Art Clay No.25","Underglaze w/ Clear", "Wheel-thrown"],
+      description: "A shallow dish with a flower design underglaze. Good size for holding jewelry, knick-knacks, or a chutney! I really love how the flower glaze pattern is so vibrant on the piece. The glaze pattern is almost exactly the same as the Garlic Grater piece."
+    },
+    {
+      title: "Flower Dish No. 2",
+      images: [
+        "images/ceramics/IMG_7181.jpeg",
+      ],
+      tags: ["White Art Clay No.25","Underglaze w/ Clear", "Wheel-thrown"],
+      description: "A companion piece to Flower Dish No. 1 a more darker, blue color scheme. This piece is a bit more bowl-shaped compare to No. 1. If I were to make some more of these, I would definitely make them larger and deeper to be used as a soup bowl with a nice foot."
+    },
+
+    {
+      title: "Liddled Jar",
+      images: [
+        "images/ceramics/IMG_7186.jpeg",
+        "images/ceramics/IMG_7187.jpeg",
+        "images/ceramics/IMG_7188.jpeg",
+      ],
+      tags: ["White Art Clay No.25", "Smokey Merlot?", "Wheel-thrown"],
+      description: "A lidded jar with a simple, classic shape. This was the first time that I experimented with a gallery on a jar. It took me a while to get the hang of it, but it turned out quite nice. The lid was slightly a bit small and I think the knob could have been a bit bigger, but overall I was really happy with how it turned out. "
+    },
+
+    {
+      title: "Bowl No. 1",
+      images: [
+        "images/ceramics/IMG_7196.jpeg",
+        "images/ceramics/IMG_7195.jpeg",
+        "images/ceramics/IMG_7194.jpeg",
+      ],
+      tags: ["White Art Clay No.25", "Ancient Jasper over Arctic Blue", "Wheel-thrown"],
+      description: "This bowl I use on a daily-basis, whether it be for my sweet treats or fruit. I love just how perfect the size is for my snacks and the glaze combination is one of my favorites! This is one of the first pieces were I actually started experimenting with different types of foots."
+    },
+  ];
+ 
+  const gallery = document.getElementById('gallery');
+ 
+  pieces.forEach(piece => {
+    const count = piece.images.length;
+    let current = 0;
+ 
+    const slidesHTML = piece.images
+      .map(src => `<img src="${src}" alt="${piece.title}" loading="lazy">`)
+      .join('');
+ 
+    const dotsHTML = piece.images
+      .map((_, i) => `<span class="dot${i === 0 ? ' active' : ''}" data-index="${i}"></span>`)
+      .join('');
+ 
+    const tagsHTML = piece.tags
+      .map(t => `<span class="tag">${t}</span>`)
+      .join('');
+ 
+    const card = document.createElement('div');
+    card.className = 'piece-card';
+    card.innerHTML = `
+      <div class="carousel" data-count="${count}">
+        <div class="carousel-slides">${slidesHTML}</div>
+        <button class="carousel-btn prev" aria-label="Previous photo">&#8592;</button>
+        <button class="carousel-btn next" aria-label="Next photo">&#8594;</button>
+        <div class="carousel-dots">${dotsHTML}</div>
+      </div>
+      <div class="piece-info">
+        <p class="piece-title">${piece.title}</p>
+        <div class="piece-meta">${tagsHTML}</div>
+        <p class="piece-desc">${piece.description}</p>
+      </div>
+    `;
+ 
+    const slidesEl  = card.querySelector('.carousel-slides');
+    const dots      = card.querySelectorAll('.dot');
+    const prevBtn   = card.querySelector('.prev');
+    const nextBtn   = card.querySelector('.next');
+ 
+    function goTo(idx) {
+      current = (idx + count) % count;
+      slidesEl.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+ 
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+    dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.index)));
+ 
+    gallery.appendChild(card);
+  });
   </script>
   </body>  
 </html>
