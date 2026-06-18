@@ -24,7 +24,7 @@ I wanted one place that actually feels like *me*, not just a list of projects, b
 
 ---
 
-## What's Inside
+## 🔎 What's Inside
 
 ### 💻 Coding Projects
 
@@ -60,7 +60,7 @@ I wanted one place that actually feels like *me*, not just a list of projects, b
 
 ---
 
-## How to Explore
+## 🗺️ How to Explore
 
 1. Visit the live site: **[aanchalpuri.github.io/portfolio](https://aanchalpuri.github.io/portfolio/)**
 2. Browse the coding section for GitHub links and embedded projects
@@ -71,9 +71,9 @@ I wanted one place that actually feels like *me*, not just a list of projects, b
 
 ## 🌻 Future Additions
 
-- [ ] 🪴 More ceramics pieces as they come out of the kiln
-- [ ] 🐝 A blog corner for behind-the-scenes thoughts
-- [ ] 🧵 Better mobile styling
+- [ ] 🏺 More ceramics pieces as they come out of the kiln
+- [ ] 💌 A blog corner for behind-the-scenes thoughts
+- [ ] 📱 Better mobile styling
 
 ---
 
