@@ -31,7 +31,7 @@ I wanted one place that actually feels like *me*, not just a list of projects, b
 
 | Project | What it does | Built with |
 |---|---|---|
-| *[Project Name]* | one-line description of what it does | Python · Django · CSS |
+| *UMD Libraries IP Manager* | Django implementation of the University of Maryland Libraries' standalone IP Manager Service | Python · Django · HTML |
 | *[Project Name]* | one-line description of what it does | JS · HTML · CSS |
 | *[Project Name]* | one-line description of what it does | Django · PostgreSQL |
 
